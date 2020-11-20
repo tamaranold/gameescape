@@ -7,37 +7,39 @@
 ui <- fluidPage(
    theme = "styles.css",
 
+   # Startseite
    titlePanel("ESCAPE GAME"),
    setBackgroundColor(color = "#082F93"),
    
-   # Sidebar with a slider input for number of bins 
+   # Intro
    fluidRow(
      br(),
      column(5, offset = 1, p(intro1)),
      column(5, p(intro2)),
      br()
     ),
-   fluidRow(style = "background-color:#F74635;",
-     column(5, offset = 1, 
-            p("zettel")),
-     column(5, 
-            scheibeUI("introScheibe", data.basis),
-            tipsUI("introTips", data.basis, 1)
-     )),
-   fluidRow( column(5, offset = 1, 
-                    p("zettel")),
-             column(5, 
-                    scheibeUI("einsScheibe", data.basis),
-                    tipsUI("einsTips", data.basis, 1)))
+   # Erste Aufgabe - Ausprobieren der Scheibe 
+   fluidRow(style = "background-color: #F74635;",
+            scheibeUI("einsScheibe", data.basis)),
+   fluidRow(style = "background-color: #F74635;",
+            align = "center", "zettel"),
+   fluidRow(style = "background-color: #F74635;",
+            align = "right", 
+            loesungUI("einsErgebnis"),
+            tipsUI("einsTips", data.basis, 1))
+   #Zweite Aufgabe
+
 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   
-  scheibe("introScheibe", data.basis) 
+  useSweetAlert()
+  
+  # Erste Aufgabe
   scheibe("einsScheibe", data.basis) 
-  
-  
+  loesung("einsErgebnis", data.basis, 1) 
+
 }
 
 # Run the application 
