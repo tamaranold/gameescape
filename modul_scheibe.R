@@ -79,9 +79,11 @@ scheibe <- function(id, data) {
           #scale_fill_manual(values = cols) +
           coord_polar(theta = "y", start = 0) +
           theme_void() +
-          theme(legend.position = "none")
+          theme(legend.position = "none",
+                text = element_text(family = "Bahnschrift"))
         
-      })
+      },
+      bg="transparent")
     }
   )
 }
