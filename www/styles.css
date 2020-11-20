@@ -29,3 +29,17 @@ body {
 .selectize-dropdown {
   border-radius:0px;
 }
+
+/* Lösungskontrolle */
+.swal2-popup {
+    border: none;
+    border-radius: none;
+    background-color: black;
+    color: white;
+}
+
+.btn-custom {
+  background-color: black;
+  color: white;
+  
+}
