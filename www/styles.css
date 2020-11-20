@@ -1,0 +1,14 @@
+/* Escape Game */
+/* Styles */
+
+/* Schriftart */
+body {
+  font-family: Bahnschrift;
+  color: white;
+  text-align: justify;
+  line-height: 1.8;
+  word-spacing: 2.5px;
+  font-size: medium;
+}
+
+/* Boxen */
