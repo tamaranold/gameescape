@@ -6,10 +6,10 @@ scheibeUI <- function(id, data) {
   ns <- NS(id)
   tagList(
     dropdownButton(
-      label = "Controls",
-      icon = icon("sliders"),
-      status = "primary",
-      width = "100%", 
+      label = "Scheibe",
+      icon = icon("dot-circle"),
+      status = "custom",
+      width = "65%", 
       #Dropdownmenue mit drei Wahlmenues fuer jeden Ring der Scheibe einen 
       column(3, 
              selectInput(inputId = ns('scheibeInnen'),
@@ -77,7 +77,7 @@ scheibe <- function(id, data) {
                     size = 7,
                     position = position_stack(vjust = 0.5)) +
           #scale_fill_manual(values = cols) +
-          coord_polar(theta = "y", start = 0) +
+          coord_polar(theta = "y", start = 12) +
           theme_void() +
           theme(legend.position = "none",
                 text = element_text(family = "Bahnschrift"))
