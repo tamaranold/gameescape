@@ -9,8 +9,9 @@ tipsUI <- function(id, data, nr) {
       label = "Tips",
       icon = icon("question"),
       status = 'custom',
-      width = "35%",
+      width = "50%",
       right = TRUE,
+      up = TRUE,
       actionButton("buttontip1", "Erster Tip"),
       conditionalPanel(
         condition = "input.buttontip1 > 0",
