@@ -5,13 +5,16 @@
 loesungUI <- function(id) {
   ns <- NS(id)
   tagList(
+    column(9, align = "right",
              numericInput(ns("los"),
-                          label = "Lösung", 
+                          label = NULL, 
                           value = 100,
                           min = 100,
-                          max = 999),
+                          max = 999,
+                          width = "80px")),
+    column(1, align = "right",
              actionButton(ns("erg"),
-                          label = "Lösung prüfen")
+                          label = "Lösung prüfen"))
     )
 }
 
