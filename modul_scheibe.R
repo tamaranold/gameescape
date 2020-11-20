@@ -12,18 +12,19 @@ scheibeUI <- function(id, data) {
       width = "65%", 
       #Dropdownmenue mit drei Wahlmenues fuer jeden Ring der Scheibe einen 
       column(3, 
-             selectInput(inputId = ns('scheibeInnen'),
-                         label = 'Innere Scheibe',
-                         choices = data[, "nr"],
-                         selected = data[1, "nr"]),
-             selectInput(inputId = ns('scheibeMittig'),
-                         label = 'Mittlere Scheibe',
-                         choices = data[, "nr"],
-                         selected = data[1, "nr"]),
              selectInput(inputId = ns('scheibeAussen'),
                          label = 'Äußere Scheibe',
                          choices =  data[, "nr"],
                          selected =  data[1, "nr"])),
+             selectInput(inputId = ns('scheibeMittig'),
+                         label = 'Mittlere Scheibe',
+                         choices = data[, "nr"],
+                         selected = data[1, "nr"]),
+             selectInput(inputId = ns('scheibeInnen'),
+                         label = 'Innere Scheibe',
+                         choices = data[, "nr"],
+                         selected = data[1, "nr"]),
+ 
       #Einfügen der Scheibe
       column(9, 
              plotOutput(ns("scheibe")))
