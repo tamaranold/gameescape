@@ -11,6 +11,7 @@ library(emojifont)
 # lade Module
 source("modul_scheibe.R")
 source("modul_tips.R")
+source("modul_loesung.R")
 source("intro.R")
 
 # Datensatz zu Aufgaben 
