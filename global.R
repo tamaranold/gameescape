@@ -23,7 +23,7 @@ data.basis <- data.frame(nr = 1:6,
 
 # Antwortexte 
 richtig <- c("Du hast es geschafft. Versuch dich am nächsten Rätsel.",
-             "Super, das war richtig. Mach weiter so!",
+             "Du bist super. Mach weiter so!",
              "Jay, das war richtig! Weiter zum nächsten Rätsel.",
              "Ein Rätsel geschafft, das Nächste wartet schon!",
              "Fantastisch, du hast die Lösung gefunden. 
