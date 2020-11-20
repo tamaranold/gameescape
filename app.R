@@ -15,8 +15,7 @@ ui <- fluidPage(
    fluidRow(
      br(),
      column(5, offset = 1, p(intro1)),
-     column(5, p(intro2)),
-     br()
+     column(5, p(intro2))
     ),
    # Erste Aufgabe - Ausprobieren der Scheibe 
    fluidRow(style = "background-color: #F74635;",
@@ -24,9 +23,8 @@ ui <- fluidPage(
    fluidRow(style = "background-color: #F74635;",
             align = "center", "zettel"),
    fluidRow(style = "background-color: #F74635;",
-            align = "right", 
-            loesungUI("einsErgebnis"),
-            tipsUI("einsTips", data.basis, 1))
+            loesungUI("einsErgebnis"), 
+            column(2, align = "right", tipsUI("einsTips", data.basis, 1)))
    #Zweite Aufgabe
 
 )
