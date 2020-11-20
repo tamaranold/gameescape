@@ -14,11 +14,11 @@ source("modul_tips.R")
 source("intro.R")
 
 # Datensatz zu Aufgaben 
-data.basis <- data.frame(nr = 1:6,
-                         los = c(123,123,123,123,123,123),
-                         tip1 = c("Tip1", "Tip1", "Tip1", "Tip1", "Tip1", "tip1"),
-                         tip2 = c("Tip2", "Tip2", "Tip2", "Tip2", "Tip2", "Tip2"),
-                         icon = c(emoji("droplet"), emoji("snowflake"), emoji("train2"),
+data.basis <- data.frame(nr = 1:7,
+                         los = c(123,123,123,123,123,123,123),
+                         tip1 = c("leer","Tip1", "Tip1", "Tip1", "Tip1", "Tip1", "tip1"),
+                         tip2 = c("leer", "Tip2", "Tip2", "Tip2", "Tip2", "Tip2", "Tip2"),
+                         icon = c("Start", emoji("droplet"), emoji("snowflake"), emoji("train2"),
                                   "II", emoji("black_flag"), "€"))
 
 # Antwortexte 
