@@ -21,6 +21,7 @@ loesung <- function(id, data, nr) {
   moduleServer(
     id,
     function(input, output, session) {
+     #Rueckmeldung, wenn Eingabe korrekt  
      observeEvent(input$erg, {
        if(input$los == data[nr, "los"]){
           sendSweetAlert(
@@ -31,6 +32,7 @@ loesung <- function(id, data, nr) {
         )
        }})
       
+      # Rueckmeldung, wenn Eingabe falsch
       observeEvent(input$erg, {
         if(input$los != data[nr, "los"]){
           sendSweetAlert(
