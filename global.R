@@ -1,5 +1,7 @@
 # Globale Einstellungen 
 
+options(encoding="UTF-8")
+
 # lade Pakete
 library(shiny)
 library(shinyWidgets)
@@ -7,9 +9,9 @@ library(tidyverse)
 library(emojifont)
 
 # lade Module
-source("escapegame/modul_scheibe.R")
-source("escapegame/modul_tips.R")
-source("escapegame/intro.R")
+source("modul_scheibe.R")
+source("modul_tips.R")
+source("intro.R")
 
 # Datensatz zu Aufgaben 
 data.basis <- data.frame(nr = 1:6,
